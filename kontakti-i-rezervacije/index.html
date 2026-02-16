@@ -7,7 +7,9 @@
     <meta name="description" content="Kontaktirajte Taxi Zagreb ili rezervirajte vožnju online. Telefon: +385 92 419 8229. Dostupni putem WhatsApp, Viber, Signal, Telegram.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -16,10 +18,13 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="/" class="nav-logo">
-                <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1l2-3h8l2 3h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17v2m14-2v2"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
-                </div>
+                <div class="logo-icon"><i class="ri-taxi-line"></i></div>
                 Taxi Zagreb
+            </a>
+
+            <a href="tel:+385924198229" class="nav-phone">
+                <i class="ri-phone-line"></i>
+                +385 92 419 8229
             </a>
 
             <div class="nav-links" id="navLinks">
@@ -27,12 +32,12 @@
                 <a href="/usluge-i-cijene/">Usluge i cijene</a>
                 <a href="/kontakti-i-rezervacije/" class="active">Kontakti</a>
                 <a href="tel:+385924198229" class="nav-cta">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <i class="ri-phone-line"></i>
                     Nazovite
                 </a>
             </div>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Otvori navigaciju">
+            <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -40,16 +45,34 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/"><i class="ri-home-4-line"></i> Naslovnica</a>
+        <a href="/usluge-i-cijene/"><i class="ri-price-tag-3-line"></i> Usluge i cijene</a>
+        <a href="/kontakti-i-rezervacije/" class="active"><i class="ri-mail-line"></i> Kontakti i rezervacije</a>
+        <a href="tel:+385924198229" class="mobile-cta"><i class="ri-phone-line"></i> Nazovite: +385 92 419 8229</a>
+    </div>
+
+    <!-- Floating Call Button (mobile) -->
+    <a href="tel:+385924198229" class="floating-cta" aria-label="Nazovite">
+        <i class="ri-phone-line"></i>
+    </a>
+
     <!-- Page Header -->
     <section class="page-header">
+        <div class="page-header-bg">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-grid-pattern"></div>
+        </div>
         <div class="container">
             <div class="breadcrumb">
                 <a href="/">Naslovnica</a>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <i class="ri-arrow-right-s-line" style="font-size:14px;"></i>
                 <span>Kontakti i rezervacije</span>
             </div>
-            <h1>Kontakti i <span class="text-yellow">rezervacije</span></h1>
-            <p>Nazovite nas, pošaljite poruku ili ispunite obrazac za rezervaciju — javit ćemo vam se u najkraćem roku.</p>
+            <h1>Kontakti i <span class="text-primary">rezervacije</span></h1>
         </div>
     </section>
 
@@ -58,32 +81,28 @@
         <div class="container">
             <!-- Contact Info -->
             <div class="contact-info fade-in">
-                <span class="section-label">Kontakt</span>
-                <h2>Javite nam se</h2>
-                <p>Dostupni smo non-stop putem telefona i poruka. Možete nas kontaktirati u bilo koje vrijeme.</p>
-
                 <div class="contact-methods">
                     <a href="tel:+385924198229" class="contact-method">
                         <div class="contact-method-icon">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <i class="ri-phone-line"></i>
                         </div>
                         <div>
-                            <div class="contact-method-label">Telefon</div>
+                            <div class="contact-method-label">Nazovite nas</div>
                             <div class="contact-method-value">+385 92 419 8229</div>
                         </div>
                     </a>
                     <a href="mailto:info@taxi-zagreb.com" class="contact-method">
                         <div class="contact-method-icon">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <i class="ri-mail-line"></i>
                         </div>
                         <div>
-                            <div class="contact-method-label">E-pošta</div>
+                            <div class="contact-method-label">Pišite nam</div>
                             <div class="contact-method-value">info@taxi-zagreb.com</div>
                         </div>
                     </a>
                     <div class="contact-method">
                         <div class="contact-method-icon">
-                            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            <i class="ri-message-3-line"></i>
                         </div>
                         <div>
                             <div class="contact-method-label">Poruke</div>
@@ -95,8 +114,8 @@
 
             <!-- Reservation Form -->
             <div class="contact-form-wrapper fade-in">
-                <h3>Rezervirajte vožnju</h3>
-                <p>Ispunite obrazac i javit ćemo vam se s potvrdom. Obavezna polja označena su zvjezdicom *</p>
+                <h3>Rezervacije</h3>
+                <p>Obavezna polja *</p>
 
                 <form class="form-grid" id="reservationForm" action="#" method="POST">
                     <div class="form-group">
@@ -143,8 +162,8 @@
                         <textarea id="message" name="message" placeholder="Dodatne napomene ili zahtjevi..."></textarea>
                     </div>
                     <div class="form-group full-width form-submit">
-                        <button type="submit" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="ri-calendar-check-line"></i>
                             Rezervirajte uslugu
                         </button>
                     </div>
@@ -153,13 +172,23 @@
         </div>
     </section>
 
+    <!-- CTA Banner -->
+    <section class="cta-banner fade-in">
+        <div class="container">
+            <div class="cta-banner-actions">
+                <a href="tel:+385924198229" class="btn btn-white btn-lg">
+                    <i class="ri-phone-line"></i>
+                    Nazovite nas +385 92 419 8229
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-brand">
-                <div class="logo-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1l2-3h8l2 3h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17v2m14-2v2"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>
-                </div>
+                <div class="logo-icon"><i class="ri-taxi-line"></i></div>
                 Taxi Zagreb
             </div>
             <div class="footer-links">

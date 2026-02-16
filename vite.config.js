@@ -7,6 +7,15 @@ export default defineConfig({
   server: {
     open: true
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        usluge: resolve(__dirname, 'usluge-i-cijene/index.html'),
+        kontakti: resolve(__dirname, 'kontakti-i-rezervacije/index.html'),
+      }
+    }
+  },
   plugins: [
     {
       name: 'clean-urls',

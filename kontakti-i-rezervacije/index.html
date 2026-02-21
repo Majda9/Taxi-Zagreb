@@ -4,27 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakti i rezervacije — Taxi Zagreb</title>
-    <meta name="description" content="Kontaktirajte Taxi Zagreb ili rezervirajte vožnju online. Telefon: +385 92 419 8229. Dostupni putem WhatsApp, Viber, Signal, Telegram.">
+    <meta name="description" content="Kontaktirajte Taxi Zagreb ili rezervirajte vožnju online. Nazovite +385 92 419 8229. Dostupni putem WhatsApp, Viber, Signal, Telegram. Non-stop usluga.">
+    <meta name="keywords" content="taxi zagreb kontakt, taxi zagreb rezervacija, rezervacija taxi, taxi telefon zagreb, taxi whatsapp zagreb, naručiti taxi zagreb">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://taxi-zagreb.com/kontakti-i-rezervacije/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kontakti i rezervacije — Taxi Zagreb">
+    <meta property="og:description" content="Rezervirajte taxi vožnju ili nas kontaktirajte. Nazovite +385 92 419 8229. WhatsApp, Viber, Signal, Telegram.">
+    <meta property="og:url" content="https://taxi-zagreb.com/kontakti-i-rezervacije/">
+    <meta property="og:site_name" content="Taxi Zagreb">
+    <meta property="og:locale" content="hr_HR">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+385924198229" class="top-bar-item top-bar-phone">
+                    <i class="ri-phone-line"></i> +385 92 419 8229
+                </a>
+                <a href="mailto:info@taxi-zagreb.com" class="top-bar-item">
+                    <i class="ri-mail-line"></i> info@taxi-zagreb.com
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/" class="lang-btn active" aria-label="Hrvatski jezik">HR</a>
+                <span class="lang-divider">|</span>
+                <a href="/en/" class="lang-btn" aria-label="English language">EN</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Glavna navigacija">
         <div class="container">
             <a href="/" class="nav-logo">
                 <div class="logo-icon"><i class="ri-taxi-line"></i></div>
                 Taxi Zagreb
-            </a>
-
-            <a href="tel:+385924198229" class="nav-phone">
-                <i class="ri-phone-line"></i>
-                +385 92 419 8229
             </a>
 
             <div class="nav-links" id="navLinks">
@@ -79,6 +105,7 @@
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
+            <h2 class="visually-hidden">Kontakt informacije i rezervacije</h2>
             <!-- Contact Info -->
             <div class="contact-info fade-in">
                 <div class="contact-methods">
@@ -200,6 +227,22 @@
             <p class="footer-bottom">&copy; 2026. Taxi Zagreb</p>
         </div>
     </footer>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Kontakti i rezervacije — Taxi Zagreb",
+        "description": "Kontaktirajte Taxi Zagreb ili rezervirajte vožnju. Dostupni putem telefona, WhatsApp, Viber, Signal, Telegram.",
+        "url": "https://taxi-zagreb.com/kontakti-i-rezervacije/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Taxi Zagreb",
+            "url": "https://taxi-zagreb.com"
+        }
+    }
+    </script>
 
     <script src="/main.js" type="module"></script>
 </body>

@@ -4,6 +4,7 @@
 
 // --- Navbar scroll effect ---
 const navbar = document.getElementById('navbar');
+const topBar = document.getElementById('topBar');
 const hero = document.getElementById('hero');
 
 function handleScroll() {
@@ -11,8 +12,10 @@ function handleScroll() {
 
   if (scrollY > 40) {
     navbar.classList.add('scrolled');
+    if (topBar) topBar.classList.add('hidden');
   } else {
     navbar.classList.remove('scrolled');
+    if (topBar) topBar.classList.remove('hidden');
   }
 
   // --- Hero scroll effects ---
@@ -116,6 +119,17 @@ document.querySelectorAll('.features-grid, .services-grid, .pricing-cards').forE
     card.style.transitionDelay = `${index * 0.1}s`;
   });
 });
+
+// --- Synced pulse animation ---
+const pulseElements = document.querySelectorAll('.pulse-sync');
+if (pulseElements.length > 0) {
+  setInterval(() => {
+    pulseElements.forEach(el => el.classList.add('pulse-up'));
+    setTimeout(() => {
+      pulseElements.forEach(el => el.classList.remove('pulse-up'));
+    }, 500);
+  }, 2000);
+}
 
 // --- Reservation form: set minimum date to today ---
 const dateInput = document.getElementById('date');

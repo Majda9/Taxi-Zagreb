@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2B2D31"/>
+  <rect width="32" height="32" rx="6" fill="#18181B"/>
   <g transform="translate(4, 6)">
     <!-- Car body -->
-    <path d="M3 14h18v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z" fill="#F0B429"/>
-    <path d="M5 8l2-4h10l2 4v6H5V8z" fill="#F0B429"/>
+    <path d="M3 14h18v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z" fill="#F59E0B"/>
+    <path d="M5 8l2-4h10l2 4v6H5V8z" fill="#F59E0B"/>
     <!-- Windows -->
-    <path d="M7 5l1.5-3h7L17 5v2H7V5z" fill="#2B2D31" opacity="0.7"/>
+    <path d="M7 5l1.5-3h7L17 5v2H7V5z" fill="#18181B" opacity="0.7"/>
     <!-- Roof sign -->
-    <rect x="9" y="0" width="6" height="3" rx="1" fill="#F7C948"/>
+    <rect x="9" y="0" width="6" height="3" rx="1" fill="#FBBF24"/>
     <!-- Wheels -->
-    <circle cx="7" cy="18" r="2" fill="#212325"/>
-    <circle cx="7" cy="18" r="1" fill="#555"/>
-    <circle cx="17" cy="18" r="2" fill="#212325"/>
-    <circle cx="17" cy="18" r="1" fill="#555"/>
+    <circle cx="7" cy="18" r="2" fill="#111"/>
+    <circle cx="7" cy="18" r="1" fill="#333"/>
+    <circle cx="17" cy="18" r="2" fill="#111"/>
+    <circle cx="17" cy="18" r="1" fill="#333"/>
     <!-- Headlights -->
-    <rect x="19" y="10" width="2" height="2" rx="0.5" fill="#F7C948"/>
-    <rect x="3" y="10" width="2" height="2" rx="0.5" fill="#F7C948"/>
+    <rect x="19" y="10" width="2" height="2" rx="0.5" fill="#FBBF24"/>
+    <rect x="3" y="10" width="2" height="2" rx="0.5" fill="#FBBF24"/>
   </g>
 </svg>

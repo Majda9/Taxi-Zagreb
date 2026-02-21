@@ -4,27 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi Zagreb — Pouzdana taxi usluga u Zagrebu</title>
-    <meta name="description" content="Najbolja taxi usluga u Zagrebu. Pouzdan i povoljan gradski prijevoz i prijevoz do zračne luke. Dostupni 24/7.">
+    <meta name="description" content="Taxi Zagreb — pouzdana taxi usluga u Zagrebu. Gradski i međugradski prijevoz, prijevoz od/do zračne luke. Dostupni non-stop. Nazovite +385 92 419 8229.">
+    <meta name="keywords" content="taxi zagreb, taxi, prijevoz zagreb, zračna luka zagreb, taxi prijevoz, gradski prijevoz zagreb, međugradski prijevoz, rezervacija taxi, taxi po pozivu">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Taxi Zagreb">
+    <link rel="canonical" href="https://taxi-zagreb.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Taxi Zagreb — Pouzdana taxi usluga u Zagrebu">
+    <meta property="og:description" content="Gradski i međugradski prijevoz, prijevoz od/do zračne luke. Dostupni non-stop. Nazovite +385 92 419 8229.">
+    <meta property="og:url" content="https://taxi-zagreb.com/">
+    <meta property="og:site_name" content="Taxi Zagreb">
+    <meta property="og:locale" content="hr_HR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Taxi Zagreb — Pouzdana taxi usluga u Zagrebu">
+    <meta name="twitter:description" content="Gradski i međugradski prijevoz, prijevoz od/do zračne luke. Dostupni non-stop.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar" id="topBar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+385924198229" class="top-bar-item top-bar-phone">
+                    <i class="ri-phone-line"></i> +385 92 419 8229
+                </a>
+                <a href="mailto:info@taxi-zagreb.com" class="top-bar-item">
+                    <i class="ri-mail-line"></i> info@taxi-zagreb.com
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/" class="lang-btn active" aria-label="Hrvatski jezik">HR</a>
+                <span class="lang-divider">|</span>
+                <a href="/en/" class="lang-btn" aria-label="English language">EN</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Glavna navigacija">
         <div class="container">
             <a href="/" class="nav-logo">
                 <div class="logo-icon"><i class="ri-taxi-line"></i></div>
                 Taxi Zagreb
-            </a>
-
-            <a href="tel:+385924198229" class="nav-phone">
-                <i class="ri-phone-line"></i>
-                +385 92 419 8229
             </a>
 
             <div class="nav-links" id="navLinks">
@@ -65,198 +97,210 @@
             <div class="hero-glow hero-glow-1"></div>
             <div class="hero-glow hero-glow-2"></div>
             <div class="hero-grid-pattern"></div>
+            <div class="hero-city-photo"></div>
         </div>
         <div class="container">
             <div class="hero-content">
                 <h1>
-                    <span class="highlight">TAXI</span> ZAGREB
+                    <span class="highlight">TAXI</span> <span class="hero-city">ZAGREB</span>
                 </h1>
-                <p class="hero-subtitle">(Među)gradski prijevoz | Prijevoz od/do zračne luke | Pozivi i rezervacije</p>
-                <p class="hero-text">
-                    Najbolja TAXI usluga u Zagrebu! Pouzdan i povoljan gradski prijevoz i prijevoz do zračne luke! Nazovite po potrebi ili izvršite rezervaciju!
-                </p>
+                <div class="hero-card">
+                    <div class="hero-card-inner">
+                        <ul class="hero-text">
+                            <li><i class="ri-check-line"></i> Najbolja TAXI usluga u Zagrebu!</li>
+                            <li><i class="ri-check-line"></i> Pouzdan i povoljan gradski prijevoz i prijevoz do zračne luke!</li>
+                            <li><i class="ri-check-line"></i> Nazovite po potrebi ili izvršite rezervaciju!</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="hero-actions">
                     <a href="tel:+385924198229" class="btn btn-primary btn-lg">
                         <i class="ri-phone-line"></i>
                         Nazovite nas +385 92 419 8229
                     </a>
-                    <a href="/kontakti-i-rezervacije/" class="btn btn-outline-light btn-lg">
+                    <a href="/kontakti-i-rezervacije/" class="btn btn-outline-light">
                         <i class="ri-calendar-line"></i>
                         Rezervacije
                     </a>
                 </div>
             </div>
             <div class="hero-image">
+                <a href="tel:+385924198229" class="speech-bubble">
+                    <span><strong class="bubble-dark">Trebate prijevoz?</strong><br><strong class="bubble-cta">Nazovite nas!</strong><br><strong class="bubble-cta bubble-number">+385 92 419 8229</strong></span>
+                </a>
+                <div class="car-glow"></div>
                 <img src="/assets/12.png" alt="Taxi Zagreb vozilo">
             </div>
         </div>
     </section>
 
-    <!-- About / Info Card Section -->
-    <section class="about-card-section">
+    <!-- Naše usluge -->
+    <section class="highlights">
         <div class="container">
-            <div class="about-card fade-in">
-                <div class="about-card-icon">
-                    <i class="ri-taxi-line"></i>
+            <div class="highlights-header fade-in">
+                <span class="section-label">Naše usluge</span>
+                <h2>Sve što trebate za siguran prijevoz</h2>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-item fade-in">
+                    <div class="highlight-icon"><i class="ri-map-pin-line"></i></div>
+                    <h3>Gradski i međugradski</h3>
+                    <p>Prijevoz po Zagrebu, okolici i cijeloj Hrvatskoj</p>
                 </div>
-                <h3>Taxi prijevoz po pozivu</h3>
-                <p>Ako trebate TAXI prijevoz u Zagrebu ili do drugih gradova ili trebate prijevoz od/do zračne luke na pravom ste mjestu!</p>
-                <p style="margin-top:12px;">Mi smo TAXI prijevozničko poduzeće locirano u Zagrebu i nudimo gradski i međugradski prijevoz, kao i prijevoz od/do zračne luke. Dostupni smo non-stop i možete nas pozvati u bilo koje vrijeme po potrebi, a možete izvršiti i rezervaciju za određeni datum i vrijeme.</p>
+                <div class="highlight-item fade-in">
+                    <div class="highlight-icon"><i class="ri-flight-takeoff-line"></i></div>
+                    <h3>Aerodrom</h3>
+                    <p>Transfer do i od zračne luke Zagreb</p>
+                </div>
+                <div class="highlight-item fade-in">
+                    <div class="highlight-icon"><i class="ri-earth-line"></i></div>
+                    <h3>Međunarodni transfer</h3>
+                    <p>Slovenija, Austrija, Italija, Njemačka, Mađarska, Bosna...</p>
+                </div>
+                <div class="highlight-item fade-in">
+                    <div class="highlight-icon"><i class="ri-heart-line"></i></div>
+                    <h3>Kućni ljubimci</h3>
+                    <p>Pet friendly — vozimo i vaše ljubimce!</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Stats Bar -->
+    <section class="stats-bar fade-in">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Godina iskustva</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Zadovoljnih putnika</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Dostupnost</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Pet Friendly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uvod — split layout with image -->
+    <section class="about-split">
+        <div class="container">
+            <div class="about-split-layout fade-in">
+                <div class="about-split-image">
+                    <img src="/assets/savedrive.jpg" alt="Profesionalni vozač Taxi Zagreb">
+                    <div class="about-split-image-badge">
+                        <i class="ri-shield-check-line"></i>
+                        <span>Licencirani vozači</span>
+                    </div>
+                </div>
+                <div class="about-split-text">
+                    <span class="section-label">O nama</span>
+                    <h2>Vaša sigurna i pouzdana vožnja</h2>
+                    <p>Dolazak na željenu destinaciju u Zagrebu nikad nije bio lakši i udobniji! Naša taxi usluga nudi izvanredno iskustvo vožnje koje uključuje beskompromisnu transparentnost, vrhunsku sigurnost i udobnost, bez ikakvih prevara.</p>
+                    <div class="about-split-features">
+                        <div class="about-split-feature">
+                            <div class="about-split-feature-icon"><i class="ri-shield-check-line"></i></div>
+                            <span>Sigurnost na prvom mjestu</span>
+                        </div>
+                        <div class="about-split-feature">
+                            <div class="about-split-feature-icon"><i class="ri-money-euro-circle-line"></i></div>
+                            <span>Transparentne cijene</span>
+                        </div>
+                        <div class="about-split-feature">
+                            <div class="about-split-feature-icon"><i class="ri-car-line"></i></div>
+                            <span>Moderna vozila</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Što dobijate s nama? -->
     <section class="features" id="znacajke">
         <div class="container">
             <div class="features-header fade-in">
-                <h2>Pouzdana usluga</h2>
-                <p>Odgovoran i savjestan vozač, vozilo sa svim sigurnosnim standardima, uredno, čisto i dezinficirano</p>
+                <span class="section-label">Prednosti</span>
+                <h2>Što dobijate s nama?</h2>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
+                        <i class="ri-money-euro-circle-line"></i>
+                    </div>
+                    <h3>Fiksna cijena</h3>
+                    <p>Bez iznenađenja na kraju vožnje. Cijena se dogovara unaprijed.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+                    <h3>Profesionalni vozači</h3>
+                    <p>Poznaju svaku ulicu i svaki granični prijelaz</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="ri-timer-line"></i>
+                    </div>
+                    <h3>Čekanje na aerodromu</h3>
+                    <p>Besplatno do 60 minuta nakon slijetanja aviona</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="ri-wifi-line"></i>
+                    </div>
+                    <h3>Wi-Fi, voda i punjači</h3>
+                    <p>Dječje sjedalice dostupne — sve bez doplate</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
                         <i class="ri-time-line"></i>
                     </div>
-                    <h3>24/7</h3>
-                    <p>Fleksibilno radno vrijeme</p>
+                    <h3>24/7 rezervacije</h3>
+                    <p>WhatsApp, telefon ili online formular — kako vam odgovara</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
-                        <i class="ri-phone-line"></i>
+                        <i class="ri-bank-card-line"></i>
                     </div>
-                    <h3>Nazovite nas</h3>
-                    <p>Vozimo po pozivu</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="ri-calendar-line"></i>
-                    </div>
-                    <h3>Rezervacije</h3>
-                    <p>Za specifičan datum i vrijeme vožnje</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="ri-taxi-line"></i>
-                    </div>
-                    <h3>Moderno vozilo</h3>
-                    <p>Opremljeno svim sigurnosnim standardima</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="ri-sparkling-line"></i>
-                    </div>
-                    <h3>Dezinficirano vozilo</h3>
-                    <p>Bez bakterija i Covid-19</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="ri-user-smile-line"></i>
-                    </div>
-                    <h3>Pristojan vozač</h3>
-                    <p>Ljubazan i susretljiv</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="ri-heart-line"></i>
-                    </div>
-                    <h3>Pet Friendly</h3>
-                    <p>Vozimo i Vaše ljubimce!</p>
+                    <h3>Plaćanje karticama</h3>
+                    <p>Mogućnost plaćanja karticama i gotovinom</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="usluge">
+    <!-- Sigurnost garantirana — split layout with image -->
+    <section class="safety-split">
         <div class="container">
-            <div class="services-header fade-in">
-                <span class="section-label">Usluge</span>
-                <h2>TAXI ZAGREB</h2>
-                <p>(Među)gradski prijevoz | Prijevoz od/do zračne luke | Pozivi i rezervacije</p>
-            </div>
-            <div class="services-bento">
-                <a href="tel:+385924198229" class="bento-card bento-large fade-in">
-                    <div class="bento-glow"></div>
-                    <div class="bento-icon">
-                        <i class="ri-map-pin-line"></i>
-                    </div>
-                    <div class="bento-content">
-                        <h3>Gradski prijevoz</h3>
-                        <p>Kvalitetan i povoljan prijevoz po gradu Zagrebu i njegovoj okolici kao i međugradski prijevoz.</p>
-                    </div>
-                    <span class="bento-action"><i class="ri-phone-line"></i> Nazovite</span>
-                </a>
-                <a href="/usluge-i-cijene/" class="bento-card bento-large fade-in">
-                    <div class="bento-glow"></div>
-                    <div class="bento-icon">
-                        <i class="ri-plane-line"></i>
-                    </div>
-                    <div class="bento-content">
-                        <h3>Zračna luka</h3>
-                        <p>Prijevoz iz Zagreba ili zagrebačke okolice do zračne luke kao i od zračne luke do odredišta.</p>
-                    </div>
-                    <span class="bento-action"><i class="ri-price-tag-3-line"></i> Pogledajte cijene</span>
-                </a>
-                <a href="/kontakti-i-rezervacije/" class="bento-card bento-wide fade-in">
-                    <div class="bento-glow"></div>
-                    <div class="bento-icon">
-                        <i class="ri-calendar-line"></i>
-                    </div>
-                    <div class="bento-content">
-                        <h3>Rezervacije</h3>
-                        <p>Ukoliko trebate prijevoz određenog datuma i/ili u određeno vrijeme možete izvršiti rezervaciju.</p>
-                    </div>
-                    <span class="bento-action"><i class="ri-calendar-line"></i> Rezervirajte</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Taxi Prijevoz Po Pozivu -->
-    <section class="po-pozivu" id="po-pozivu">
-        <div class="container">
-            <div class="po-pozivu-layout fade-in">
-                <div class="po-pozivu-left">
-                    <span class="section-label">Taxi prijevoz po pozivu</span>
-                    <h2>TAXI PRIJEVOZ PO POZIVU</h2>
-                    <p class="po-pozivu-subtitle">Gradski prijevoz / Zračna luka</p>
-                    <p class="po-pozivu-text">Slobodno nas kontaktirajte za detalje ili ispunite formular za rezervacije.</p>
-                    <div class="po-pozivu-actions">
-                        <a href="tel:+385924198229" class="btn btn-primary btn-lg">
-                            <i class="ri-phone-line"></i>
-                            Nazovite nas
-                        </a>
-                        <a href="/kontakti-i-rezervacije/" class="btn btn-outline-light btn-lg">
-                            <i class="ri-calendar-line"></i>
-                            Rezervacije
-                        </a>
+            <div class="safety-split-layout fade-in">
+                <div class="safety-split-text">
+                    <span class="section-label">Sigurnost</span>
+                    <h2>Sigurnost garantirana</h2>
+                    <p>Koristeći najnoviju tehnologiju i inovativna rješenja, pružamo brzu i pouzdanu uslugu koja će vas uvjeriti da ste odabrali najbolje.</p>
+                    <p>U našim vozilima, koja su moderna, udobna i besprijekorno čista, svako putovanje postaje užitak, bez obzira koliko dugo trajalo.</p>
+                    <div class="safety-checklist">
+                        <div class="safety-check"><i class="ri-check-line"></i> Moderna i čista vozila</div>
+                        <div class="safety-check"><i class="ri-check-line"></i> Redoviti tehnički pregledi</div>
+                        <div class="safety-check"><i class="ri-check-line"></i> Osigurana vožnja</div>
+                        <div class="safety-check"><i class="ri-check-line"></i> GPS praćenje u stvarnom vremenu</div>
                     </div>
                 </div>
-                <div class="po-pozivu-right">
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-time-line"></i></div>
-                        <span>Non stop usluga</span>
-                    </div>
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-taxi-line"></i></div>
-                        <span>Vozilo sa sigurnosnim standardima</span>
-                    </div>
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-user-smile-line"></i></div>
-                        <span>Smiren i pristojan vozač</span>
-                    </div>
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-sparkling-line"></i></div>
-                        <span>Vozilo dezinficirano od bakterija i Covid-19</span>
-                    </div>
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-shield-check-line"></i></div>
-                        <span>Dobra i pouzdana usluga</span>
-                    </div>
-                    <div class="po-pozivu-item fade-in">
-                        <div class="po-pozivu-item-icon"><i class="ri-heart-line"></i></div>
-                        <span>TAXI prijevoz za ljubimce</span>
+                <div class="safety-split-image">
+                    <img src="/assets/city1.jpg" alt="Zagreb grad">
+                    <div class="safety-split-image-overlay">
+                        <div class="safety-badge-big">
+                            <i class="ri-shield-check-line"></i>
+                            <span>100% sigurno</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,17 +310,20 @@
     <!-- CTA Banner -->
     <section class="cta-banner fade-in">
         <div class="container">
-            <h2>Kontakti i rezervacije</h2>
-            <p>Slobodno nas kontaktirajte za detalje ili ispunite formular za rezervacije.</p>
-            <div class="cta-banner-actions">
-                <a href="tel:+385924198229" class="btn btn-white btn-lg">
-                    <i class="ri-phone-line"></i>
-                    Nazovite nas +385 92 419 8229
-                </a>
-                <a href="/kontakti-i-rezervacije/" class="btn btn-ghost btn-lg">
-                    <i class="ri-calendar-line"></i>
-                    Rezervacije
-                </a>
+            <div class="cta-banner-content">
+                <span class="section-label">Rezervirajte vožnju</span>
+                <h2>Kamo god trebate — mi vas vozimo!</h2>
+                <p>Bilo da idete na poslovni sastanak, godišnji odmor, vikend bijeg ili na let u 5 ujutro — mi smo tu da vas odvezemo sigurno i udobno.</p>
+                <div class="cta-banner-actions">
+                    <a href="tel:+385924198229" class="btn btn-white btn-lg">
+                        <i class="ri-phone-line"></i>
+                        Nazovite nas +385 92 419 8229
+                    </a>
+                    <a href="/kontakti-i-rezervacije/" class="btn btn-ghost btn-lg">
+                        <i class="ri-calendar-line"></i>
+                        Rezervirajte sada
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -292,7 +339,7 @@
                 <div class="cta-channels">
                     <span class="channel-badge"><i class="ri-message-3-line"></i> WhatsApp</span>
                     <span class="channel-badge"><i class="ri-message-3-line"></i> Viber</span>
-sv                    <span class="channel-badge"><i class="ri-message-3-line"></i> Signal</span>
+                    <span class="channel-badge"><i class="ri-message-3-line"></i> Signal</span>
                     <span class="channel-badge"><i class="ri-send-plane-line"></i> Telegram</span>
                 </div>
             </div>
@@ -302,19 +349,63 @@ sv                    <span class="channel-badge"><i class="ri-message-3-line"><
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-brand">
-                <div class="logo-icon"><i class="ri-taxi-line"></i></div>
-                Taxi Zagreb
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="footer-brand">
+                        <div class="logo-icon"><i class="ri-taxi-line"></i></div>
+                        Taxi Zagreb
+                    </div>
+                    <p class="footer-desc">Pouzdana taxi usluga u Zagrebu. Gradski i međugradski prijevoz, prijevoz do zračne luke.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Navigacija</h4>
+                    <a href="/">Naslovnica</a>
+                    <a href="/usluge-i-cijene/">Usluge i cijene</a>
+                    <a href="/kontakti-i-rezervacije/">Kontakti i rezervacije</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Kontakt</h4>
+                    <a href="tel:+385924198229"><i class="ri-phone-line"></i> +385 92 419 8229</a>
+                    <a href="mailto:info@taxi-zagreb.com"><i class="ri-mail-line"></i> info@taxi-zagreb.com</a>
+                    <span class="footer-social-text">WhatsApp / Viber / Signal / Telegram</span>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="/">Naslovnica</a>
-                <a href="/usluge-i-cijene/">Usluge i cijene</a>
-                <a href="/kontakti-i-rezervacije/">Kontakti i rezervacije</a>
-                <a href="mailto:info@taxi-zagreb.com">info@taxi-zagreb.com</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026. Taxi Zagreb — Sva prava pridržana</p>
             </div>
-            <p class="footer-bottom">&copy; 2026. Taxi Zagreb</p>
         </div>
     </footer>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Taxi Zagreb",
+        "description": "Pouzdana taxi usluga u Zagrebu. Gradski i međugradski prijevoz, prijevoz od/do zračne luke.",
+        "url": "https://taxi-zagreb.com",
+        "telephone": "+385924198229",
+        "email": "info@taxi-zagreb.com",
+        "areaServed": {
+            "@type": "City",
+            "name": "Zagreb",
+            "sameAs": "https://hr.wikipedia.org/wiki/Zagreb"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zagreb",
+            "addressCountry": "HR"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "priceRange": "$$",
+        "serviceType": ["Gradski prijevoz", "Međugradski prijevoz", "Prijevoz do zračne luke", "Taxi po pozivu", "Rezervacije"]
+    }
+    </script>
 
     <script src="/main.js" type="module"></script>
 </body>

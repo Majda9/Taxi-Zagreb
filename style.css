@@ -1691,25 +1691,67 @@ h3 { font-size: 1.15rem; }
 }
 
 .safety-split-text .section-label {
-  margin-bottom: 12px;
+  color: var(--primary);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .safety-split-text h2 {
+  font-size: 2.6rem;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .safety-split-text p {
-  color: var(--text-secondary);
-  font-size: 1rem;
+  color: var(--text);
+  font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .safety-checklist {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 24px;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.safety-features-centered {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 500px;
+  margin: 28px auto 0;
+}
+.safety-features-centered .about-split-feature {
+  flex-direction: row;
+  text-align: left;
+}
+
+.safety-check-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.safety-check-item i {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #18181B;
+  font-size: 0.85rem;
 }
 
 .safety-check {
@@ -1850,6 +1892,7 @@ h3 { font-size: 1.15rem; }
 
 .features-header h2 {
   color: #fff;
+  font-size: 2.6rem;
 }
 
 .features-header p {
@@ -1861,6 +1904,9 @@ h3 { font-size: 1.15rem; }
 
 .features-header .section-label {
   color: var(--primary);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .features-grid {
@@ -1952,13 +1998,13 @@ h3 { font-size: 1.15rem; }
 }
 
 .feature-card h3 {
-  font-size: 1rem;
-  margin-bottom: 6px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
   color: #fff;
 }
 
 .feature-card p {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
 }

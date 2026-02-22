@@ -768,8 +768,8 @@ h3 { font-size: 1.15rem; }
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 240px;
+  padding-bottom: 60px;
 }
 
 .hero-content {
@@ -1299,6 +1299,106 @@ h3 { font-size: 1.15rem; }
   font-weight: 500;
 }
 
+/* --- Home Services Section --- */
+.home-services {
+  padding: 64px 0;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+}
+
+.home-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  z-index: 3;
+}
+
+.home-services::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  z-index: 3;
+}
+
+.home-services-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+.home-services-header h2 {
+  color: #fff;
+}
+
+.home-services-header .section-label {
+  color: var(--primary);
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.home-service-card {
+  background: #18181B;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(217, 119, 6, 0.1);
+}
+
+.home-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #E8890B, #F0A020);
+}
+
+.home-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 119, 6, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.home-service-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(251, 191, 36, 0.2) 100%);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.home-service-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.home-service-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
 /* --- About Card Section --- */
 .about-card-section {
   padding: 64px 0;
@@ -1368,6 +1468,17 @@ h3 { font-size: 1.15rem; }
   content: '';
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  z-index: 3;
+}
+
+.about-split::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 3px;
@@ -1496,6 +1607,29 @@ h3 { font-size: 1.15rem; }
 .safety-split {
   padding: 80px 0;
   background: var(--bg);
+  position: relative;
+}
+
+.safety-split::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  z-index: 3;
+}
+
+.safety-split::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+  z-index: 3;
 }
 
 .safety-split-layout {
@@ -2917,13 +3051,22 @@ h3 { font-size: 1.15rem; }
 
   .hero h1 { font-size: 4rem; }
 
+  .hero-content {
+    text-align: center;
+  }
+
   .hero .container {
     padding-bottom: 120px;
+  }
+
+  .hero-image {
+    margin-right: 0;
   }
 
   .hero-actions {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-actions .btn {
@@ -2933,6 +3076,9 @@ h3 { font-size: 1.15rem; }
   .about-card {
     padding: 44px 40px;
   }
+
+  .home-services { padding: 80px 0; }
+  .home-services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
   .features { padding: 100px 0; }
   .features-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -2997,8 +3143,7 @@ h3 { font-size: 1.15rem; }
   h2 { font-size: 2.4rem; }
   h3 { font-size: 1.3rem; }
 
-  .highlights { padding: 80px 0 48px; }
-  .highlights-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  /* highlights only on mobile, hidden from 768px+ */
 
   .nav-logo { font-size: 1.3rem; }
   .nav-logo .logo-icon { width: 42px; height: 42px; }
@@ -3009,14 +3154,18 @@ h3 { font-size: 1.15rem; }
   .mobile-menu,
   .mobile-overlay { display: none !important; }
 
-  .hero h1 { font-size: 5.2rem; }
+  /* Hero — fluid scaling across all desktop sizes (1024px → 1600px+) */
+  .hero h1 {
+    font-size: clamp(4.2rem, 0.12rem + 6.34vw, 5.8rem);
+    white-space: nowrap;
+  }
 
   .hero .container {
     flex-direction: row;
     align-items: center;
-    gap: 40px;
-    padding-top: 140px;
-    padding-bottom: 140px;
+    gap: clamp(40px, 4.44px + 3.47vw, 60px);
+    padding-top: 200px;
+    padding-bottom: 60px;
   }
 
   .hero-content {
@@ -3026,11 +3175,8 @@ h3 { font-size: 1.15rem; }
   }
 
   .hero-content h1 {
-    margin-left: -6px;
-  }
-
-  .hero-actions {
-    padding-left: 26px;
+    text-align: center;
+    width: 100%;
   }
 
   .hero-features {
@@ -3043,17 +3189,17 @@ h3 { font-size: 1.15rem; }
 
   .hero-actions {
     align-items: flex-start;
-    margin-left: -20px;
   }
 
   .hero-image {
     flex: 1.2;
-    max-width: 620px;
-    margin-right: -180px;
+    min-width: 0;
+    max-width: clamp(380px, -46.7px + 41.67vw, 620px);
+    margin-right: clamp(-200px, calc(300px - 31.25vw), -20px);
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .about-card {
@@ -3096,6 +3242,10 @@ h3 { font-size: 1.15rem; }
   .cta-banner { padding: 100px 0; }
   .cta-banner h2 { font-size: 2.4rem; }
 
+  .home-services { padding: 100px 0; }
+  .home-services-grid { gap: 24px; }
+  .home-service-card { padding: 36px 32px; }
+
   .features { padding: 120px 0; }
   .features-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
@@ -3118,15 +3268,4 @@ h3 { font-size: 1.15rem; }
 /* --- LARGE DESKTOP: 1280px+ --- */
 @media (min-width: 1280px) {
   h1 { font-size: 3.5rem; }
-  .hero h1 { font-size: 5.8rem; }
-  .hero-text { font-size: 1.25rem; }
-
-  .hero .container {
-    gap: 60px;
-  }
-
-  .hero-image {
-    max-width: 680px;
-    margin-right: -220px;
-  }
 }

@@ -11,8 +11,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        usluge: resolve(__dirname, 'usluge-i-cijene/index.html'),
+        usluge: resolve(__dirname, 'usluge/index.html'),
+        oNama: resolve(__dirname, 'o-nama/index.html'),
         kontakti: resolve(__dirname, 'kontakti-i-rezervacije/index.html'),
+        enHome: resolve(__dirname, 'en/index.html'),
+        enServices: resolve(__dirname, 'en/services/index.html'),
+        enAbout: resolve(__dirname, 'en/about/index.html'),
+        enContact: resolve(__dirname, 'en/contact/index.html'),
       }
     }
   },

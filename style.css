@@ -2885,7 +2885,7 @@ h3 { font-size: 1.15rem; }
   /* Hero container — mobile spacing */
   .hero .container {
     gap: 24px;
-    padding-top: 290px;
+    padding-top: 230px;
     padding-bottom: 60px;
   }
 
@@ -3164,7 +3164,7 @@ h3 { font-size: 1.15rem; }
     flex-direction: row;
     align-items: center;
     gap: clamp(40px, 4.44px + 3.47vw, 60px);
-    padding-top: 200px;
+    padding-top: 140px;
     padding-bottom: 60px;
   }
 

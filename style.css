@@ -3056,11 +3056,12 @@ h3 { font-size: 1.15rem; }
   }
 
   .hero .container {
+    padding-top: 120px;
     padding-bottom: 120px;
   }
 
   .hero-image {
-    margin-right: 0;
+    display: none;
   }
 
   .hero-actions {
@@ -3154,50 +3155,6 @@ h3 { font-size: 1.15rem; }
   .mobile-menu,
   .mobile-overlay { display: none !important; }
 
-  /* Hero — fluid scaling across all desktop sizes (1024px → 1600px+) */
-  .hero h1 {
-    font-size: clamp(4.2rem, 0.12rem + 6.34vw, 5.8rem);
-    white-space: nowrap;
-  }
-
-  .hero .container {
-    flex-direction: row;
-    align-items: center;
-    gap: clamp(40px, 4.44px + 3.47vw, 60px);
-    padding-top: 140px;
-    padding-bottom: 60px;
-  }
-
-  .hero-content {
-    flex: 1;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .hero-content h1 {
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-features {
-    flex-direction: column;
-  }
-
-  .hero-card {
-    margin-left: 0;
-  }
-
-  .hero-actions {
-    align-items: flex-start;
-  }
-
-  .hero-image {
-    flex: 1.2;
-    min-width: 0;
-    max-width: clamp(380px, -46.7px + 41.67vw, 620px);
-    margin-right: clamp(-200px, calc(300px - 31.25vw), -20px);
-  }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
@@ -3263,6 +3220,45 @@ h3 { font-size: 1.15rem; }
 
   .contact .container { gap: 64px; }
   .contact-form-wrapper { padding: 44px; }
+}
+
+/* --- HERO SPLIT: 1100px+ (car visible) --- */
+@media (min-width: 1100px) {
+  .hero h1 {
+    font-size: clamp(4.2rem, 0.12rem + 6.34vw, 5.8rem);
+    white-space: nowrap;
+  }
+
+  .hero .container {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(40px, 4.44px + 3.47vw, 60px);
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-card {
+    margin-left: 0;
+  }
+
+  .hero-actions {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    display: block;
+    flex: 1.2;
+    min-width: 0;
+    max-width: clamp(380px, -46.7px + 41.67vw, 620px);
+    margin-right: clamp(-200px, calc(300px - 31.25vw), -20px);
+  }
 }
 
 /* --- LARGE DESKTOP: 1280px+ --- */

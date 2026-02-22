@@ -3355,6 +3355,26 @@ h3 { font-size: 1.15rem; }
     font-size: 1.1rem;
     flex-shrink: 0;
   }
+
+  /* Section h2 overrides for mobile */
+  .home-services-header h2,
+  .about-split-header h2,
+  .about-split-text h2,
+  .safety-split-text h2,
+  .features-header h2,
+  .cta-banner-content h2,
+  .how-it-works-header h2 {
+    font-size: 1.75rem;
+  }
+
+  /* CTA banner buttons — same size on mobile */
+  .cta-label {
+    display: none;
+  }
+  .cta-banner-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* --- TABLET: 768px+ --- */

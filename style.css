@@ -1482,14 +1482,19 @@ h3 { font-size: 1.15rem; }
 
 /* --- About Split Section (image + text) --- */
 .about-split {
-  padding: 80px 0;
+  padding: 48px 0 80px;
   background: var(--bg);
   position: relative;
 }
 
 .about-split-header {
   text-align: center;
-  margin: 0 auto 48px;
+  margin: 0 auto 28px;
+}
+
+.about-split-text h2,
+.about-split-text p {
+  text-align: center;
 }
 
 .about-split-header h2 {
@@ -1580,11 +1585,12 @@ h3 { font-size: 1.15rem; }
 
 .about-split-text h2 {
   margin-bottom: 16px;
+  font-size: 2rem;
 }
 
 .about-split-text p {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 28px;
 }
@@ -1634,7 +1640,7 @@ h3 { font-size: 1.15rem; }
 }
 
 .about-split-feature span {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text);
 }
@@ -3224,6 +3230,8 @@ h3 { font-size: 1.15rem; }
   }
   .about-split-image img { height: 100%; min-height: 420px; }
   .about-split-text { flex: 1; }
+  .about-split-text h2,
+  .about-split-text p { text-align: left; }
   .about-split-features { flex-direction: column; }
   .about-split-feature { flex-direction: row; text-align: left; }
 

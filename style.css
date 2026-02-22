@@ -1585,7 +1585,7 @@ h3 { font-size: 1.15rem; }
 
 .about-split-text h2 {
   margin-bottom: 16px;
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
 .about-split-text p {
@@ -2425,19 +2425,23 @@ h3 { font-size: 1.15rem; }
 
 .cta-banner-content .section-label {
   color: var(--primary);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .cta-banner h2 {
   color: #fff;
   margin-bottom: 12px;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
 }
 
 .cta-banner p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   margin-bottom: 32px;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.7;
+  font-weight: 500;
 }
 
 .cta-banner-actions {
@@ -2445,6 +2449,11 @@ h3 { font-size: 1.15rem; }
   flex-direction: column;
   gap: 12px;
   align-items: center;
+}
+
+.cta-banner .btn-white .ri-phone-line {
+  animation: phone-shake 2s ease-in-out infinite;
+  display: inline-block;
 }
 
 .cta-banner .btn-white {
@@ -2466,6 +2475,26 @@ h3 { font-size: 1.15rem; }
 .cta-banner .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--white);
+}
+
+.cta-banner .btn-outline-light {
+  background: rgba(0, 0, 0, 0.08);
+  color: #fff;
+  border: 2px solid #F59E0B;
+}
+
+.cta-banner .btn-outline-light i {
+  color: #fff;
+}
+
+.cta-banner .btn-outline-light:hover {
+  background: var(--primary);
+  color: var(--dark);
+  border-color: var(--primary);
+}
+
+.cta-banner .btn-outline-light:hover i {
+  color: var(--dark);
 }
 
 /* --- Contact / Reservation Form --- */
@@ -3164,7 +3193,7 @@ h3 { font-size: 1.15rem; }
   .safety-split-image img { height: 380px; }
   .safety-checklist { grid-template-columns: 1fr 1fr; }
 
-  .cta-banner h2 { font-size: 2.2rem; }
+  .cta-banner h2 { font-size: 2.8rem; }
   .cta-banner-actions {
     flex-direction: row;
     justify-content: center;
@@ -3251,7 +3280,7 @@ h3 { font-size: 1.15rem; }
 
   /* CTA banner - desktop */
   .cta-banner { padding: 100px 0; }
-  .cta-banner h2 { font-size: 2.4rem; }
+  .cta-banner h2 { font-size: 2.8rem; }
 
   .home-services { padding: 100px 0; }
   .home-services-grid { gap: 24px; }

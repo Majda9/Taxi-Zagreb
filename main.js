@@ -137,3 +137,62 @@ if (dateInput) {
   const today = new Date().toISOString().split('T')[0];
   dateInput.setAttribute('min', today);
 }
+
+// --- Reservation form: AJAX submission ---
+const reservationForm = document.getElementById('reservationForm');
+if (reservationForm) {
+  reservationForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = reservationForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    const msgContainer = document.getElementById('formMessage');
+
+    // Hide previous message
+    msgContainer.className = 'form-message';
+    msgContainer.textContent = '';
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> ' +
+      (document.documentElement.lang === 'en' ? 'Sending...' : 'Šaljem...');
+
+    try {
+      const formData = new FormData(reservationForm);
+      formData.append('lang', document.documentElement.lang);
+
+      const response = await fetch('/send-form.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        msgContainer.className = 'form-message form-message-success';
+        msgContainer.innerHTML = '<i class="ri-check-line"></i> ' + result.message;
+        reservationForm.reset();
+        // Reset min date after form reset
+        if (dateInput) {
+          const today = new Date().toISOString().split('T')[0];
+          dateInput.setAttribute('min', today);
+        }
+      } else {
+        msgContainer.className = 'form-message form-message-error';
+        msgContainer.innerHTML = '<i class="ri-error-warning-line"></i> ' + result.message;
+      }
+    } catch {
+      msgContainer.className = 'form-message form-message-error';
+      msgContainer.innerHTML = '<i class="ri-error-warning-line"></i> ' +
+        (document.documentElement.lang === 'en'
+          ? 'An error occurred. Please call us at +385 92 419 8229.'
+          : 'Došlo je do greške. Molimo nazovite nas na +385 92 419 8229.');
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+
+    // Scroll to message
+    msgContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}

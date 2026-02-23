@@ -7,7 +7,11 @@
     <meta name="description" content="Kontaktirajte Taxi Zagreb ili rezervirajte vožnju online. Nazovite +385 92 419 8229. Dostupni putem WhatsApp, Viber, Signal, Telegram. Non-stop usluga.">
     <meta name="keywords" content="taxi zagreb kontakt, taxi zagreb rezervacija, rezervacija taxi, taxi telefon zagreb, taxi whatsapp zagreb, naručiti taxi zagreb">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="Taxi Zagreb">
     <link rel="canonical" href="https://taxi-zagreb.com/kontakti-i-rezervacije/">
+    <link rel="alternate" hreflang="hr" href="https://taxi-zagreb.com/kontakti-i-rezervacije/">
+    <link rel="alternate" hreflang="en" href="https://taxi-zagreb.com/en/contact/">
+    <link rel="alternate" hreflang="x-default" href="https://taxi-zagreb.com/kontakti-i-rezervacije/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -16,7 +20,24 @@
     <meta property="og:url" content="https://taxi-zagreb.com/kontakti-i-rezervacije/">
     <meta property="og:site_name" content="Taxi Zagreb">
     <meta property="og:locale" content="hr_HR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image" content="https://taxi-zagreb.com/assets/14.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakti i rezervacije — Taxi Zagreb">
+    <meta name="twitter:description" content="Rezervirajte taxi vožnju ili nas kontaktirajte. Nazovite +385 92 419 8229.">
+    <meta name="twitter:image" content="https://taxi-zagreb.com/assets/14.jpg">
+
+    <!-- Geo tags for local SEO -->
+    <meta name="geo.region" content="HR-21">
+    <meta name="geo.placename" content="Zagreb">
+    <meta name="geo.position" content="45.815;15.9819">
+    <meta name="ICBM" content="45.815, 15.9819">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -88,7 +109,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/385924198229" class="floating-whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/385924198229" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <i class="ri-whatsapp-line"></i>
         Javite nam se!
     </a>
@@ -130,7 +151,7 @@
                             <div class="contact-method-value">info@taxi-zagreb.com</div>
                         </div>
                     </a>
-                    <a href="https://wa.me/385924198229" target="_blank" class="contact-method">
+                    <a href="https://wa.me/385924198229" target="_blank" rel="noopener noreferrer" class="contact-method">
                         <div class="contact-method-icon">
                             <i class="ri-whatsapp-line"></i>
                         </div>
@@ -147,7 +168,10 @@
                 <h3>Rezervacije</h3>
                 <p>Obavezna polja *</p>
 
-                <form class="form-grid" id="reservationForm" action="#" method="POST">
+                <form class="form-grid" id="reservationForm" action="/send-form.php" method="POST">
+                    <div class="form-group" style="position:absolute;left:-9999px;opacity:0;height:0" aria-hidden="true">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
                     <div class="form-group">
                         <label for="name">Ime i prezime <span class="required">*</span></label>
                         <input type="text" id="name" name="name" placeholder="Vaše ime i prezime" required>
@@ -192,6 +216,7 @@
                         <textarea id="message" name="message" placeholder="Dodatne napomene ili zahtjevi..."></textarea>
                     </div>
                     <div class="form-group full-width form-submit">
+                        <div id="formMessage" class="form-message"></div>
                         <button type="submit" class="btn btn-primary btn-lg">
                             <i class="ri-calendar-check-line"></i>
                             Rezervirajte uslugu
@@ -208,7 +233,7 @@
             <div class="cta-banner-actions">
                 <a href="tel:+385924198229" class="btn btn-white btn-lg">
                     <i class="ri-phone-line"></i>
-                    Nazovite nas +385 92 419 8229
+                    +385 92 419 8229
                 </a>
             </div>
         </div>
@@ -270,7 +295,7 @@
         "isPartOf": {
             "@type": "WebSite",
             "name": "Taxi Zagreb",
-            "url": "https://taxi-zagreb.com"
+            "url": "https://taxi-zagreb.com/"
         }
     }
     </script>

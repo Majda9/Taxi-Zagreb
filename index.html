@@ -9,6 +9,9 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Taxi Zagreb">
     <link rel="canonical" href="https://taxi-zagreb.com/">
+    <link rel="alternate" hreflang="hr" href="https://taxi-zagreb.com/">
+    <link rel="alternate" hreflang="en" href="https://taxi-zagreb.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://taxi-zagreb.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -17,12 +20,25 @@
     <meta property="og:url" content="https://taxi-zagreb.com/">
     <meta property="og:site_name" content="Taxi Zagreb">
     <meta property="og:locale" content="hr_HR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image" content="https://taxi-zagreb.com/assets/14.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Taxi Zagreb — Pouzdana taxi usluga u Zagrebu">
     <meta name="twitter:description" content="Gradski i međugradski prijevoz, prijevoz od/do zračne luke. Dostupni non-stop.">
+    <meta name="twitter:image" content="https://taxi-zagreb.com/assets/14.jpg">
 
+    <!-- Geo tags for local SEO -->
+    <meta name="geo.region" content="HR-21">
+    <meta name="geo.placename" content="Zagreb">
+    <meta name="geo.position" content="45.815;15.9819">
+    <meta name="ICBM" content="45.815, 15.9819">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preload" as="image" type="image/webp" href="/assets/14.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -94,7 +110,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/385924198229" class="floating-whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/385924198229" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <i class="ri-whatsapp-line"></i>
         Javite nam se!
     </a>
@@ -139,7 +155,10 @@
                     <span><strong class="bubble-dark">Trebate prijevoz?</strong><br><strong class="bubble-cta">Nazovite nas!</strong><br><strong class="bubble-cta bubble-number">+385 92 419 8229</strong></span>
                 </a>
                 <div class="car-glow"></div>
-                <img src="/assets/12.png" alt="Taxi Zagreb vozilo">
+                <picture>
+                    <source srcset="/assets/12.webp" type="image/webp">
+                    <img src="/assets/12.png" alt="Taxi Zagreb vozilo">
+                </picture>
             </div>
         </div>
     </section>
@@ -221,7 +240,10 @@
             </div>
             <div class="about-split-layout fade-in">
                 <div class="about-split-image">
-                    <img src="/assets/savedrive.jpg" alt="Profesionalni vozač Taxi Zagreb">
+                    <picture>
+                        <source srcset="/assets/savedrive.webp" type="image/webp">
+                        <img src="/assets/savedrive.jpg" alt="Profesionalni vozač Taxi Zagreb" loading="lazy">
+                    </picture>
                     <div class="about-split-image-badge">
                         <i class="ri-shield-check-line"></i>
                         <span>Licencirani vozači</span>
@@ -263,7 +285,7 @@
                 <div class="cta-banner-actions">
                     <a href="tel:+385924198229" class="btn btn-white btn-lg">
                         <i class="ri-phone-line"></i>
-                        <span class="cta-label">Nazovite nas</span> +385 92 419 8229
+                        +385 92 419 8229
                     </a>
                     <a href="/kontakti-i-rezervacije/" class="btn btn-outline-light btn-lg">
                         <i class="ri-calendar-line"></i>
@@ -326,7 +348,7 @@
         "@type": "TaxiService",
         "name": "Taxi Zagreb",
         "description": "Pouzdana taxi usluga u Zagrebu. Gradski i međugradski prijevoz, prijevoz od/do zračne luke.",
-        "url": "https://taxi-zagreb.com",
+        "url": "https://taxi-zagreb.com/",
         "telephone": "+385924198229",
         "email": "info@taxi-zagreb.com",
         "areaServed": {

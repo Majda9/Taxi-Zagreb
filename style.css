@@ -885,7 +885,7 @@ h3 { font-size: 1.15rem; }
   transform: translateX(-50%);
   width: 80%;
   height: 80px;
-  background: radial-gradient(ellipse, rgba(217, 119, 6, 0.45) 0%, rgba(217, 119, 6, 0.2) 40%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 40%, transparent 70%);
   border-radius: 50%;
   filter: blur(20px);
   z-index: 1;
@@ -3442,12 +3442,10 @@ h3 { font-size: 1.15rem; }
     gap: 24px;
   }
 
-  .hero h1 { font-size: clamp(4rem, 2rem + 4vw, 5.5rem); }
+  .hero h1 { font-size: clamp(2.6rem, 1rem + 3.5vw, 3.8rem); }
 
   .hero-content {
     text-align: center;
-    position: relative;
-    top: -80px;
   }
 
   .hero-card {
@@ -3711,8 +3709,7 @@ h3 { font-size: 1.15rem; }
   }
 
   .hero h1 {
-    font-size: clamp(4.2rem, 0.12rem + 6.34vw, 5.8rem);
-    white-space: nowrap;
+    font-size: clamp(2.8rem, 0.5rem + 3.5vw, 3.8rem);
   }
 
   .hero .container {

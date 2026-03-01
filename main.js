@@ -161,7 +161,7 @@ if (reservationForm) {
       const formData = new FormData(reservationForm);
       formData.append('lang', document.documentElement.lang);
 
-      const response = await fetch('/send-form.php', {
+      const response = await fetch('https://form.taxi-zagreb.com', {
         method: 'POST',
         body: formData
       });

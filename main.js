@@ -2,6 +2,19 @@
 // TAXI ZAGREB — Main JavaScript
 // ============================================
 
+// --- Car image carousel ---
+const carCarousels = document.querySelectorAll('.car-carousel');
+if (carCarousels.length > 0) {
+  const slideGroups = Array.from(carCarousels).map(c => Array.from(c.querySelectorAll('.car-slide')));
+  const total = slideGroups[0].length;
+  let currentIdx = 0;
+  setInterval(() => {
+    slideGroups.forEach(group => group[currentIdx].classList.remove('active'));
+    currentIdx = (currentIdx + 1) % total;
+    slideGroups.forEach(group => group[currentIdx].classList.add('active'));
+  }, 3500);
+}
+
 // --- Navbar scroll effect ---
 const navbar = document.getElementById('navbar');
 const topBar = document.getElementById('topBar');

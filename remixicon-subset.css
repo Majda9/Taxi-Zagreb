@@ -1,0 +1,24 @@
+@font-face{font-family:"remixicon";src:url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2?t=1734404658139") format("woff2"),url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff?t=1734404658139") format("woff");font-display:swap}
+[class^="ri-"],[class*=" ri-"]{font-family:'remixicon'!important;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.ri-arrow-right-line:before{content:"\ea6c"}
+.ri-bank-card-line:before{content:"\ea92"}
+.ri-calendar-check-line:before{content:"\eb23"}
+.ri-calendar-line:before{content:"\eb27"}
+.ri-car-fill:before{content:"\eb38"}
+.ri-car-line:before{content:"\eb39"}
+.ri-check-line:before{content:"\eb7b"}
+.ri-earth-line:before{content:"\ec7a"}
+.ri-heart-line:before{content:"\ee0f"}
+.ri-home-4-line:before{content:"\ee1d"}
+.ri-mail-line:before{content:"\eef6"}
+.ri-map-pin-line:before{content:"\ef14"}
+.ri-money-euro-circle-line:before{content:"\ef69"}
+.ri-phone-line:before{content:"\efec"}
+.ri-plane-line:before{content:"\f005"}
+.ri-price-tag-3-line:before{content:"\f023"}
+.ri-shield-check-line:before{content:"\f100"}
+.ri-time-line:before{content:"\f20f"}
+.ri-user-line:before{content:"\f264"}
+.ri-user-star-line:before{content:"\f276"}
+.ri-vip-crown-line:before{content:"\f28e"}
+.ri-whatsapp-line:before{content:"\f2bc"}

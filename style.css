@@ -729,6 +729,7 @@ h3 { font-size: 1.15rem; }
   position: absolute;
   border-radius: 50%;
   filter: blur(140px);
+  will-change: transform;
 }
 
 .hero-glow-1 {
@@ -737,12 +738,16 @@ h3 { font-size: 1.15rem; }
   background: radial-gradient(circle, rgba(217, 119, 6, 0.06) 0%, transparent 70%);
   top: -20%;
   right: -10%;
+  left: auto;
+  bottom: auto;
 }
 
 .hero-glow-2 {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(217, 119, 6, 0.04) 0%, transparent 70%);
+  top: auto;
+  right: auto;
   bottom: -10%;
   left: -5%;
 }
@@ -2961,20 +2966,26 @@ h3 { font-size: 1.15rem; }
   background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, transparent 70%);
   top: -30%;
   right: -10%;
+  left: auto;
+  bottom: auto;
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
+  will-change: transform;
 }
 
 .page-header .hero-glow-2 {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+  top: auto;
+  right: auto;
   bottom: -20%;
   left: -10%;
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
+  will-change: transform;
 }
 
 .page-header .hero-grid-pattern {

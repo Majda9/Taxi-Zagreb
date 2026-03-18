@@ -44,8 +44,8 @@ function handleScroll() {
   }
 }
 
-window.addEventListener('scroll', handleScroll, { passive: true });
-handleScroll();
+window.addEventListener('scroll', () => requestAnimationFrame(handleScroll), { passive: true });
+requestAnimationFrame(handleScroll);
 
 // --- Transparent navbar over hero or page-header ---
 const darkSection = hero || document.querySelector('.page-header');

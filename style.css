@@ -1265,6 +1265,8 @@ h3 { font-size: 1.15rem; }
   padding: 40px 0 60px;
   background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
   z-index: 2;
 }
 .highlights::before {
@@ -1359,6 +1361,8 @@ h3 { font-size: 1.15rem; }
   padding: 28px 0 64px;
   background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .home-services::before {
@@ -1528,6 +1532,8 @@ h3 { font-size: 1.15rem; }
   padding: 48px 0 80px;
   background: var(--bg);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
 }
 
 .about-split-header {
@@ -2478,6 +2484,8 @@ h3 { font-size: 1.15rem; }
   padding: 80px 0;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   color: var(--white);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
   position: relative;
   overflow: hidden;
 }
@@ -2808,6 +2816,8 @@ h3 { font-size: 1.15rem; }
   padding: 56px 0 28px;
   background: var(--dark);
   color: rgba(255, 255, 255, 0.7);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
   position: relative;
 }
 

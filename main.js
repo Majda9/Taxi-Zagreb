@@ -19,6 +19,9 @@ if (carCarousels.length > 0) {
 const navbar = document.getElementById('navbar');
 const topBar = document.getElementById('topBar');
 const hero = document.getElementById('hero');
+const heroContent = hero ? hero.querySelector('.hero-content') : null;
+let heroHeight = hero ? hero.offsetHeight : 0;
+if (hero) window.addEventListener('resize', () => { heroHeight = hero.offsetHeight; }, { passive: true });
 
 function handleScroll() {
   const scrollY = window.scrollY;
@@ -32,15 +35,10 @@ function handleScroll() {
   }
 
   // --- Hero scroll effects ---
-  if (hero) {
-    const heroContent = hero.querySelector('.hero-content');
-
-    // Fade out hero content on scroll
-    if (heroContent) {
-      const opacity = Math.max(0, 1 - scrollY / (hero.offsetHeight * 0.5));
-      heroContent.style.opacity = opacity;
-      heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
-    }
+  if (heroContent && heroHeight) {
+    const opacity = Math.max(0, 1 - scrollY / (heroHeight * 0.5));
+    heroContent.style.opacity = opacity;
+    heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
   }
 }
 

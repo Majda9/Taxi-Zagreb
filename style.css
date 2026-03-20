@@ -686,7 +686,7 @@ h3 { font-size: 1.15rem; }
   gap: 10px;
   padding: 14px 28px;
   background: #25D366;
-  color: #fff;
+  color: #003d14;
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 600;
@@ -703,7 +703,7 @@ h3 { font-size: 1.15rem; }
 .floating-whatsapp-btn:hover {
   background: #1EBE57;
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
-  color: #fff;
+  color: #003d14;
 }
 
 /* --- Hero Section --- */

@@ -18,32 +18,6 @@ if (!empty($_POST['website'])) {
     exit;
 }
 
-// Cloudflare Turnstile verification
-$turnstileToken = $_POST['cf-turnstile-response'] ?? '';
-if ($turnstileToken) {
-    $turnstileSecret = '0x4AAAAAAACvFC7Xp141AVRwKSbstxsWkr2Q';
-    $verifyData = [
-        'secret' => $turnstileSecret,
-        'response' => $turnstileToken,
-        'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
-    ];
-    $ch = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($verifyData));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    $verifyResponse = curl_exec($ch);
-    curl_close($ch);
-    $verifyResult = json_decode($verifyResponse, true);
-    if (!$verifyResult || !$verifyResult['success']) {
-        echo json_encode(['success' => false, 'message' => 'Security verification failed. Please try again.']);
-        exit;
-    }
-} else {
-    echo json_encode(['success' => false, 'message' => 'Security verification required.']);
-    exit;
-}
-
 // Sanitize input
 function clean($value) {
     return htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');

@@ -163,14 +163,26 @@ if (reservationForm) {
     msgContainer.className = 'form-message';
     msgContainer.textContent = '';
 
+    const formData = new FormData(reservationForm);
+    formData.append('lang', document.documentElement.lang);
+
+    // Turnstile check
+    const turnstileResponse = formData.get('cf-turnstile-response');
+    if (!turnstileResponse) {
+      msgContainer.className = 'form-message form-message-error';
+      msgContainer.innerHTML = '<i class="ri-error-warning-line"></i> ' +
+        (document.documentElement.lang === 'en'
+          ? 'Please complete the security check.'
+          : 'Molimo dovršite sigurnosnu provjeru.');
+      return;
+    }
+
     // Loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> ' +
       (document.documentElement.lang === 'en' ? 'Sending...' : 'Šaljem...');
 
     try {
-      const formData = new FormData(reservationForm);
-      formData.append('lang', document.documentElement.lang);
 
       const response = await fetch('https://form.taxi-zagreb.com', {
         method: 'POST',
@@ -183,6 +195,8 @@ if (reservationForm) {
         msgContainer.className = 'form-message form-message-success';
         msgContainer.innerHTML = '<i class="ri-check-line"></i> ' + result.message;
         reservationForm.reset();
+        // Reset Turnstile widget
+        if (typeof turnstile !== 'undefined') turnstile.reset();
         // Reset min date after form reset
         if (dateInput) {
           const today = new Date().toISOString().split('T')[0];
